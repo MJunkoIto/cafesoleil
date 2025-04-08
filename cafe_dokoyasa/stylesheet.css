@@ -1,3 +1,8 @@
+/*.....................................
+
+トップ
+......................................*/
+
 .mv {
     text-align: center;
     background-image: url(img/mv-background.jpg);
@@ -30,7 +35,11 @@
     text-decoration: none;
 }
 
-/* コンテンツ */
+/*.....................................
+
+私たちについて
+......................................*/
+
 .inner {
     max-width: 1220px;
     margin: 0 auto;
@@ -46,27 +55,28 @@
 }
 
 
-/* フレックスボックスにしてみた→エラー */
 .about {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin: 50px 20px;
     padding-bottom: 0px;
+    justify-content: space-between;
 }
-
 
 
 .about img {
     width: 50%;
 }
 
-.about .about-text p {    /*いなくなった*/
+
+.about-text {    
     width: 50%;
-    align-items: left;
     justify-content: center;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.8;
+    margin: 40px 20px 20px 0px;
+    box-sizing: border-box; /* 余白を含めたサイズ計算 */
 }
 
 /* グリットレイアウト
@@ -86,15 +96,20 @@
 /* フレックスボックスに挑戦→エラー*/
 .gallery{
     display: flex; /*oyayouso*/
-    width: 33%;
     flex-wrap: wrap;
     justify-content: center; 
     padding: 50px 20px;
     margin: 5px;
 }
 
+.gallery img {
+    margin: 5px;
+    padding: 5px;
+}
+    
 
-/* グリットレイアウト
+
+/* グリットレイアウトなら
 .gallery {
     margin-top: 60px;
     display: grid;
@@ -106,8 +121,9 @@
 /*フッターもposotionに挑戦*/
 
 .footer {
-    display: flex;
-    justify-content: center;
+    position: relative;
+    justify-content: space-between;
+    align-items: left;
     flex-direction: row;
     margin-top: 160px;
     background: #000;
